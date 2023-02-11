@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THIS AND THE DOM</title>
+</head>
+<body>
+  
+  <style>
+    .tc{text-align: center}
+    .br{border-radius: 30px;}
+    .mw{max-width: 500px;}
+    .m0a{margin: 0 auto;}
+    
+  </style>
+
+<button onclick="reveal(this)">CLICK HERE!</button>
+
+<p onclick="reveal(this)">PROBA</p>
+
+<h1 class="tc br mw m0a" onclick="pro(this)">CHANGE</h1>
+
+<script>
+  function reveal(element) {
+    console.log(element);
+    element.style.color="red";
+    element.style.backgroundColor = "green"
+  }
+
+  function pro(element) {
+    console.log(element);
+    element.style.color="lightblue";
+    element.style.backgroundColor="black"
+  }
+</script>
+
+
+</body>
+</html>

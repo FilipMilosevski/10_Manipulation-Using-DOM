@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home ex1</title>
+</head>
+<body>
+  <h1>LETS FIND THE ELEMENT</h1>
+  <div id="forest">
+    <div id="tree1">
+      <div id="squirel"></div>
+      <div id="flower"></div>
+    </div>
+    <div id="tree2">
+      <div id="shrubbery">
+        <div id="treasure"></div>
+      </div>
+      <div id="mushroom">
+        <div id="bug"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    console.log(document.body.children.forest.children.tree2.children[0].children[0].id);
+    console.log(document.body.children.forest.children.tree2.children[0].children[0].id);
+
+    console.log(document.body.children.forest.children.tree2.children.shrubbery.children.treasure.id);
+
+
+
+    console.log("//////////////////");
+    console.log(document.body.children.forest.children.tree2.children.shrubbery.children.treasure.id);
+  </script>
+</body>
+</html>

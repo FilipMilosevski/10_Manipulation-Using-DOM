@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELEMENT QUICK HANDLER</title>
+</head>
+<body>
+  
+<h1>ON CLICK</h1>
+<div id="one"onclick = "alert('WELCOME')">CLICK HERE</div>
+
+<div id="one"onclick = "console.log('FILIPon')">CLICK HERE</div>
+
+
+<div id="three">DONT CLICK ME</div>
+
+
+
+<div class="test1" onclick="alert('THERE')">HI</div>            
+<div class="test2" onclick="console.log('SCRIPT')">JAVA</div>
+<div id="test3">FILIP</div>
+
+<div id="two" onclick="stop()">C L I C K !</div>
+<script>
+  function stop() {
+    alert("OUCH! STOP IT!")
+  }
+console.dir(document.getElementById("three"))
+
+
+
+document.getElementById("three").onclick = function () {
+  stop();
+  alert("why you clicked me")
+}
+
+
+
+
+
+function num() {
+  alert("MILOSEVSKI")
+}
+console.dir(document.getElementById('test3'))
+
+document.getElementById("test3").onclick = function () {
+  num();
+  alert("FICO")
+}
+
+</script>
+
+
+</body>
+</html>

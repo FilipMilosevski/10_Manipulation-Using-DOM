@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOOGLE BUTTON</title>
+</head>
+<body>
+  
+
+
+  <style>
+    #testbutton {
+      background-color: #45d638;
+      color: white
+      
+    }
+    
+    #testbutton.clicked {
+      background-color: #ec4444;
+    }
+  
+    .ml{margin-left: 200px;}
+    .w500{width: 500px;}
+
+  </style>
+    <button class="ma w500" id="testbutton">Toggle</button>
+    <!-- <h1 id="testbutton">Toggle</h1> -->
+
+    <script>
+     
+     let testButton = document.getElementById("testbutton");
+  
+  testButton.addEventListener("click", () => {
+    testButton.classList.toggle('clicked');
+  })
+  
+  
+    </script> 
+    
+
+
+
+
+
+
+
+</body>
+</html>

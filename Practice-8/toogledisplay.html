@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toogle Display</title>
+ 
+</head>
+<body>
+  
+<p id="magic">I MIGHT DISAPPEAR AND APPEAR</p>
+<button onclick = "toogleDisplay()">MAGIC!</button>
+<br>
+<br>
+<br>
+
+<button id="change" onclick = "lightdark()">FILIP!</button>
+
+
+<script>
+  function toogleDisplay() {
+    let p = document.getElementById("magic");
+    if(p.style.display === "none") {
+      p.style.display = "block";
+    } else {
+      p.style.display = "none";
+    }
+  }
+
+
+  
+  function lightdark() {
+      let p = document.getElementById("magic");
+      if (document.body.style.backgroundColor === "white") {
+        document.body.style.backgroundColor = "black";
+      } else {
+        document.body.style.backgroundColor = "white";
+      }
+    }
+
+</script>
+
+
+</html>
