@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TO DO APP</title>
+</head>
+<body>
+
+ 
+
+  <input id="todo-title" type="text"/>
+  <input id="date-picker" type="date"/>
+
+<button onclick="addtodo()">Add To Do</button>
+
+<div id="todo-list"></div>
+
+  <script>
+ 
+let todos;
+
+const saveTodos =  JSON.parse(localStorage.getItem('todos'))
+
+if (Array.isArray(saveTodos)) {
+  todos = saveTodos;
+} else {
+  todos = [
+  {
+    title:"Get Groceries",
+    dueDate:'2021.04.01', 
+    id: "id1"
+  },
+  {
+    title:"Wash Car",
+    dueDate:'2021.05.02',
+    id: "id2"
+  },
+  {
+    title:"Make Dinner",
+    dueDate:"2021.03.05",
+    id: "id3"
+  }
+]
+}
+render();
+function createtodo(title,dueDate) {
+  const id = ""+ new Date().getTime() /// ''convert number vo string
+todos.push({
+  title:title,
+  dueDate:dueDate,
+  id: id
+});
+savetodos()
+}
+function removetodo(idtodelete) {
+  todos = todos.filter(function (todo) {
+    if (todo.id === idtodelete) {
+      return false;
+    } else {
+      return true;
+    }
+  });
+  savetodos()
+}
+function savetodos() {
+  localStorage.setItem('todos', JSON.stringify(todos))
+}
+function addtodo() {
+  const textbox = document.getElementById("todo-title")
+  const title = textbox.value;
+  const datePicker = document.getElementById("date-picker")
+  const dueDate = datePicker.value;
+  createtodo(title,dueDate)
+  render()
+}
+function deletetodo(event) {
+  const deleteButton = event.target;
+  const idtodelete = deleteButton.id;
+ removetodo(idtodelete)
+ render()
+}
+///////////////////////////////////////////////////                  1:17
+function render() {
+  document.getElementById("todo-list").innerHTML = "";
+  todos.forEach(function (todo) {
+  const element = document.createElement("div")
+element.innerText = todo.title + " "+todo.dueDate;
+const deleteButton = document.createElement("button")
+deleteButton.innerText ="Delete"
+deleteButton.style ="margin-left: 50px"
+deleteButton.onclick = deletetodo;
+deleteButton.id = todo.id
+element.appendChild(deleteButton)
+
+const todoList = document.getElementById("todo-list");
+todoList.appendChild(element)
+})
+}
+  </script>
+</body>
+</html>

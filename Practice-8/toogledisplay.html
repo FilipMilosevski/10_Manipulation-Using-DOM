@@ -16,7 +16,11 @@
 <br>
 
 <button id="change" onclick = "lightdark()">FILIP!</button>
+<br><br><br><br><br>
 
+
+<h3 id="ex">TEST</h3>
+<button onclick="fm()">CHANGE</button>
 
 <script>
   function toogleDisplay() {
@@ -38,6 +42,16 @@
         document.body.style.backgroundColor = "white";
       }
     }
+
+    function fm() {
+      let f = document.getElementById("ex");
+      if (f.style.display === "none") {
+        f.style.display = "block";
+      } else {
+        f.style.display = "none"
+      }
+    }
+
 
 </script>
 

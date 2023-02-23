@@ -1,0 +1,78 @@
+<style>
+  .demo {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: rgb(129, 128, 204);
+    color: rgb(192, 204, 173);
+  }
+
+
+  .new-class {
+    background: red;
+    color: blue;
+  }
+  
+.fm {
+display: flex;
+justify-content: space-around;
+flex-direction: row;  
+flex-wrap: wrap;
+
+} 
+#test{
+width: 100px;
+height: 100px;
+}
+
+</style>
+
+<table class="fm">
+<tr>
+  <td><button id="test" class="demo">1</button></td>
+  <td><button id="test" class="demo">2</button></td>
+  <td><button id="test" class="demo">3</button></td>
+  <td><button id="test" class="demo">4</button></td>
+  <td><button id="test" class="demo">5</button></td>
+
+</tr>
+<tr>
+  <td><button id="test" class="demo">6</button></td>
+  <td><button id="test" class="demo">7</button></td>
+  <td><button id="test" class="demo">8</button></td>
+  <td><button id="test" class="demo">9</button></td>
+  <td><button id="test" class="demo">10</button></td>
+
+</tr>
+<tr>
+  <td><button id="test" class="demo">11</button></td>
+  <td><button id="test" class="demo">12</button></td>
+  <td><button id="test" class="demo">13</button></td>
+  <td><button id="test" class="demo">14</button></td>
+  <td><button id="test" class="demo">15</button></td>
+
+</tr>
+<tr>
+  <td><button id="test" class="demo">16</button></td>
+  <td><button id="test" class="demo">17</button></td>
+  <td><button id="test" class="demo">18</button></td>
+  <td><button id="test" class="demo">19</button></td>
+  <td><button id="test" class="demo">20</button></td>
+
+</tr>
+
+</table>
+
+
+<script>
+ 
+ var btn = document.querySelectorAll("#test");
+for (let i = 0; i < btn.length; i++) {
+btn[i].addEventListener("click", function () {
+  btn[i].classList.add("demo");
+  btn[i].classList.toggle("new-class");
+});
+}
+
+
+
+</script>
